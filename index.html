@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="./css/index.css" />
+        <title>Alisher</title>
+    </head>
+    <body>
+        <div class="click-me">
+            <div class="click-me-message opacity0">
+                Did you notice parallax effect? <br>Try moving your cursor!
+            </div>
+            <button onclick="clickMe()">Click me ;)</button>
+        </div>
+        <div class="clouds">
+            <div class="cloud1 cloudImage" data-accelerate="0.06"><img src="images/cloud1.png" alt="" /></div>
+            <div class="cloud2 cloudImage" data-accelerate="0.04"><img src="images/cloud2.png" alt="" /></div>
+            <div class="cloud3 cloudImage" data-accelerate="0.09"><img src="images/cloud3.webp" alt="" /></div>
+        </div> 
+        <div class="bg-img">
+            <img id="bgImage" src="./images/bg.jpg" alt="BG Image" />
+        </div>
+        <header>
+            <nav>
+                <div class="container">
+                    <div class="nav-items">
+                        <div class="nav-item"><a href="./aboutme.html" class="nav-link">About me</a></div>
+                        <div class="nav-item"><a href="" class="nav-link">Shop</a></div>
+                        <div class="nav-item"><a href="" class="nav-link">Form</a></div>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero">
+                <div class="container">
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Hello, I'm</h3>
+                            <h1 class="accent text-glow">ALISHER KODIROV</h1>
+                        </div>
+                        <div class="card">
+                            Computing student, web developer, and tech enthusiast. I enjoy <span class="accent">creating websites with stunning visuals</span>, learning
+                            new technologies, and turning ideas into <span class="accent">real projects</span>.
+                        </div>
+                        <a href="./aboutme.html" class="card-link">
+                            About me
+                        </a>
+                    </div>
+                    <div class="my-pic">
+                        <img id="myImage" src="./images/me.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script src="js/index.js"></script>
+    </body>
+</html>

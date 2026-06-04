@@ -1,0 +1,293 @@
+:root {
+    --bg-color: #050505;
+    --text-color: #e6dada;
+    --accent-color: #ff5252;
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    color: var(--text-color);
+    transition: 0.1s;
+}
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+header {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    height: 100svh;
+    position: relative;
+}
+header::before {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    content: "";
+    height: 0;
+    background: #000;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 50px 100px 100px #000000;
+}
+body {
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+nav {
+    background: var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    backdrop-filter: blur(4px);
+}
+
+.bg-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+.bg-img img {
+    transform: scale(1.2);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: 0.8s ease-out;
+}
+.container {
+    width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+.nav-items {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+}
+nav .container {
+    height: 100%;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100svh - 70px);
+}
+.nav-link {
+    position: relative;
+}
+.nav-link::before {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--accent-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.2s;
+}
+.nav-link:hover {
+    color: var(--accent-color);
+}
+.nav-link:hover::before {
+    width: 100%;
+}
+.accent {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+.my-pic {
+    height: 100%;
+    width: 100%;
+    min-height: 0;
+    min-width: 0;
+}
+.my-pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.8s ease-out;
+    filter: brightness(0.8);
+    object-position: 50% calc(50% + 75px);
+}
+
+.card {
+    background: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px) brightness(60%);
+    width: fit-content;
+    box-shadow: 0 0 20px -5px var(--border-color);
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+}
+.text-glow {
+    text-shadow: 0 0 15px var(--accent-color);
+}
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.cloud1 img,
+.cloud2 img,
+.cloud3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cloud1 {
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+.cloud2 {
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+.cloud3 {
+    width: 1000px;
+    position: absolute;
+    top: 90%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.cloudImage {
+    transition: 0.8s ease-out;
+    opacity: 0.5;
+}
+.card-link {
+    background: var(--accent-color);
+    width: fit-content;
+    padding: 10px 30px;
+    border-radius: 20px;
+    align-self: flex-end;
+    font-size: 20px;
+}
+.card-link:hover {
+    scale: 1.1;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.click-me{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.click-me button{
+    background: var(--accent-color);
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: 0.1s;
+}
+
+.click-me button:hover{
+    scale: 1.1;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+.click-me button:active{
+    scale: 0.9;
+    transition: none;
+}
+
+.click-me-message{
+    padding: 20px;
+    background: var(--accent-color);
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    opacity: 1;
+}
+.opacity0{
+    opacity: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        width: 900px;
+    }
+    .cloudImage {
+        scale: 0.8;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        width: 600px;
+    }
+    .click-me{
+        display: none;
+    }
+    .cloudImage {
+        display: none;
+    }
+    .card-link {
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 300px;
+    }
+    .cloudImage {
+        display: none;
+    }
+    .card-link {
+        align-self: center;
+    }
+    .hero .container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 75px;
+    }
+    .card {
+        text-align: center;
+    }
+    header {
+        grid-template-rows: 50px 1fr;
+    }
+    .hero {
+        height: calc(100svh - 50px);
+    }
+    .nav-items{
+        font-size: 18px;
+    }
+}
