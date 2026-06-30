@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="./css/form.css" />
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Student Details</h1>
+        <form action="./for-submitted.html">
+            <table>
+                <tr>
+                    <td>
+                        <div class="table-content-left">Student ID</div>
+                    </td>
+                    <td>
+                        <div class="table-content-right">
+                            <input name="id" type="number" required placeholder="Your Student ID..." type="text" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-content-left">Name</div>
+                    </td>
+                    <td>
+                        <div class="table-content-right">
+                            <input name="name" required placeholder="Your Name..." type="text" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-content-left">Gender</div>
+                    </td>
+                    <td>
+                        <div class="table-content-right">
+                            <input type="radio" value="Male" name="gender" id="gender-male" />
+                            <label for="gender-male">Male</label>
+                            <input type="radio" value="Female" name="gender" id="gender-female" />
+                            <label for="gender-female">Female</label>
+                            <input checked type="radio" value="No" name="gender" id="gender-no" />
+                            <label for="gender-no">Rather Not Say</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-content-left">Favourite Module</div>
+                    </td>
+                    <td>
+                        <div class="table-content-right">
+                            <select required name="fav-module" id="fav-module">
+                                <option selected disabled value="">Please choose a module...</option>
+                                <option value="comp">Introduction to Computing</option>
+                                <option value="web">Web Programming</option>
+                                <option value="alg">Introduction to Algorithm</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-content-left">Notes</div>
+                    </td>
+                    <td>
+                        <div class="table-content-right">
+                            <textarea placeholder="Your notes..." name="notes" id="notes"></textarea>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="table-content-left">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="table-content-right">
+                            <button type="reset">Reset</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

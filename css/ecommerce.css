@@ -27,8 +27,7 @@ a {
 body {
     background: var(--bg-color);
     position: relative;
-    padding: 70px 0;
-
+    padding: 70px 0 50px;
 }
 nav {
     height: 70px;
@@ -37,6 +36,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 .container {
     max-width: 1240px;
@@ -153,7 +153,7 @@ input[type=radio]{
     font-weight: bold;
     font-size: 24px;
 }
-.products, .designs{
+.products, .designs, .others{
     padding: 20px;
     background: var(--border-color);
     border: 1px solid var(--border-color);
@@ -167,20 +167,13 @@ section .container{
     flex-direction: column;
     gap: 20px;
 }
-footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: var(--hover-color);
-    padding: 20px 0;
-    text-align: right;
-}
-.designs label{
-    display: block;
+.design{
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
+}
+.design.selected{
+    background: var(--accent-color);
 }
 .design-img{
     width: 100px;
@@ -188,9 +181,12 @@ footer{
     border-radius: 5px;
     overflow: hidden;
 }
-.designs label:hover{
+.design:hover{
     scale: 1.1;
     background: var(--hover-color);
+}
+.design.selected:hover{
+    background: var(--accent-color);
 }
 
 .design-img img{
@@ -199,5 +195,166 @@ footer{
     object-fit: cover;
 }
 .design-name{
+    font-size: 12px;
     padding-top: 10px;
+}
+.design.disabled .design-img{
+    position: relative;
+}
+
+.design.disabled .design-img::before{
+    content: "Not Available";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    background: red;
+    z-index: 1;
+}
+.design.disabled img{
+    opacity: 0.5;
+}
+.design.disabled .design-name{
+    opacity: 0.5;
+}
+.design.disabled{
+    position: relative;
+}
+.design.disabled:hover{
+    cursor: not-allowed;
+    scale: none;
+    background: none;
+}
+select{
+    font: inherit;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--border-color);
+    border-radius: 10px;
+    outline: none;
+}
+option{
+    background: var(--bg-color);
+}
+.empty-opt{
+    display: none;
+}
+.designs .cards{
+    padding-bottom: 20px;
+}
+button{
+    background: var(--accent-color);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+button:hover{
+    scale: 1.1;
+}
+button:active{
+    scale: 0.9;
+}
+
+.others{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.total{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    background: var(--hover-color);
+    border-radius: 10px;
+}
+
+.payment{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+}
+.payment-text{
+    font-size: 24px;
+}
+table{
+    font-size: 18px;
+    border-spacing: 0;
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    overflow: hidden;
+}
+th{
+    background: var(--hover-color);
+}
+td, th{
+    border-bottom: 1px solid var(--accent-color);
+    padding: 10px 15px;
+    width: 50%;
+}
+td:first-child, th:first-child{
+    border-right: 1px solid var(--accent-color);
+}
+td:last-child{
+    text-align: right;
+}
+tr.sum{
+    background: var(--accent-color);
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 900px;
+    }
+    .product-img{
+        width: 150px;
+        height: 150px;
+    }
+    .cards{
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 16px;
+    }
+    .title{
+        font-size: 14px;
+    }
+    .product-name{
+        font-size: 12px;
+    }
+    
+    .payment-text{
+        font-size: 12px;
+    }
+    .cards{
+        justify-content: space-around;
+    }
+    button{
+        font-size: 12px;
+    }
+    .nav-items{
+        font-size: 12px;
+    }
+    table{
+        font-size: 14px;
+    }
+    .others{
+        font-size: 12px;
+    }
+    .total{
+        font-size: 16px;
+    }
+    #logo-file{
+        max-width: 200px;
+        padding-top: 10px;
+    }
 }

@@ -21,7 +21,7 @@
                             <a href="./aboutme.html" class="nav-link"><span>About me</span></a>
                         </div>
                         <div class="nav-item">
-                            <a href="#" class="nav-link"><span>Form</span></a>
+                            <a href="./form.html" class="nav-link"><span>Form</span></a>
                         </div>
                     </div>
                 </div>
@@ -37,39 +37,39 @@
                         <div class="title">Select type of your shirt below:</div>
                         <div class="cards">
                             <div class="card">
-                                <input type="radio" name="product" id="product1" />
+                                <input data-name="T-Shirt" data-cost="20" type="radio" name="product" id="product1" />
                                 <label for="product1">
                                     <div class="product-img">
                                         <img src="./images/tshirt.png" alt="T-Shirt" />
                                     </div>
-                                    <div class="product-name">T-shirt</div>
+                                    <div class="product-name">T-shirt (RM 20)</div>
                                 </label>
                             </div>
                             <div class="card">
-                                <input type="radio" name="product" id="product2" />
+                                <input data-name="Polo" data-cost="25" type="radio" name="product" id="product2" />
                                 <label for="product2">
                                     <div class="product-img">
                                         <img src="./images/poloshirt.png" alt="Polo shirt" />
                                     </div>
-                                    <div class="product-name">Polo</div>
+                                    <div class="product-name">Polo (RM 25)</div>
                                 </label>
                             </div>
                             <div class="card">
-                                <input type="radio" name="product" id="product3" />
+                                <input data-name="Button Up" data-cost="35" type="radio" name="product" id="product3" />
                                 <label for="product3">
                                     <div class="product-img">
                                         <img src="./images/buttonup.webp" alt="Button up" />
                                     </div>
-                                    <div class="product-name">Button Up</div>
+                                    <div class="product-name">Button Up (RM 35)</div>
                                 </label>
                             </div>
                             <div class="card">
-                                <input type="radio" name="product" id="product4" />
+                                <input data-name="Hoodie" data-cost="75" type="radio" name="product" id="product4" />
                                 <label for="product4">
                                     <div class="product-img">
                                         <img src="./images/hoodie.webp" alt="Hoodie" />
                                     </div>
-                                    <div class="product-name">Hoodie</div>
+                                    <div class="product-name">Hoodie (RM 75)</div>
                                 </label>
                             </div>
                         </div>
@@ -78,68 +78,92 @@
                         <div class="title">Select design:</div>
                         <div class="cards">
                             <div class="card">
-                                <input type="radio" name="design" id="design1">
-                                <label for="design1">
+                                <div data-name="Design 1" data-cost="10" data-value="design1" class="design">
                                     <div class="design-img">
-                                        <img src="./images/pattern1.avif" alt="Design 1">
+                                        <img src="./images/pattern1.avif" alt="Design 1" />
                                     </div>
-                                    <div class="design-name">Design 1</div>
-                                </label>
+                                    <div class="design-name">Design 1 (RM 10)</div>
+                                </div>
                             </div>
                             <div class="card">
-                                <input type="radio" name="design" id="design2">
-                                <label for="design2">
+                                <div data-name="Design 2" data-cost="20" data-value="design2" class="design">
                                     <div class="design-img">
-                                        <img src="./images/pattern2.jpg" alt="Design 2">
+                                        <img src="./images/pattern2.jpg" alt="Design 2" />
                                     </div>
-                                    <div class="design-name">Design 2</div>
-                                </label>
+                                    <div class="design-name">Design 2 (RM 20)</div>
+                                </div>
                             </div>
                             <div class="card">
-                                <input type="radio" name="design" id="design3">
-                                <label for="design3">
+                                <div data-name="Design 3" data-cost="30" data-value="design3" class="design">
                                     <div class="design-img">
-                                        <img src="./images/pattern3.avif" alt="Design 3">
+                                        <img src="./images/pattern3.avif" alt="Design 3" />
                                     </div>
-                                    <div class="design-name">Design 3</div>
-                                </label>
+                                    <div class="design-name">Design 3 (RM 30)</div>
+                                </div>
                             </div>
                             <div class="card">
-                                <input type="radio" name="design" id="design4">
-                                <label for="design4">
+                                <div data-name="Design 4" data-cost="40" data-value="design4" class="design disabled">
                                     <div class="design-img">
-                                        <img src="./images/pattern4.avif" alt="Design 4">
+                                        <img src="./images/pattern4.avif" alt="Design 4" />
                                     </div>
-                                    <div class="design-name">Design 4</div>
-                                </label>
+                                    <div class="design-name">Design 4 (RM 40)</div>
+                                </div>
                             </div>
                             <div class="card">
-                                <input type="radio" name="design" id="design5">
-                                <label for="design5">
+                                <div data-name="Design 5" data-cost="45" data-value="design5" class="design">
                                     <div class="design-img">
-                                        <img src="./images/pattern5.jpg" alt="Design 5">
+                                        <img src="./images/pattern5.jpg" alt="Design 5" />
                                     </div>
-                                    <div class="design-name">Design 2</div>
-                                </label>
+                                    <div class="design-name">Design 5 (RM 45)</div>
+                                </div>
                             </div>
                             <div class="card">
-                                <input type="radio" name="design" id="design6">
-                                <label for="design6">
+                                <div data-name="Design 6" data-cost="55" data-value="design6" class="design">
                                     <div class="design-img">
-                                        <img src="./images/pattern2.jpg" alt="Design 6">
+                                        <img src="./images/pattern6.jpg" alt="Design 6" />
                                     </div>
-                                    <div class="design-name">Design 2</div>
-                                </label>
+                                    <div class="design-name">Design 6 (RM 55)</div>
+                                </div>
                             </div>
                         </div>
+                        <select name="design" id="design-select">
+                            <option value="" disabled selected class="empty-opt">Select design:</option>
+                            <option value="design1">Design 1 (RM 10)</option>
+                            <option value="design2">Design 2 (RM 20)</option>
+                            <option value="design3">Design 3 (RM 30)</option>
+                            <option value="design4" disabled>Design 4 (RM 40)</option>
+                            <option value="design5">Design 5 (RM 45)</option>
+                            <option value="design6">Design 6 (RM 55)</option>
+                        </select>
+                    </div>
+                    <div class="others">
+                        <div class="embroidery">
+                            <label for="embroidery">Include Embroidery <strong>(RM 10)</strong></label>
+                            <input data-cost="10" type="checkbox" name="embroidery" id="embroidery" />
+                        </div>
+                        <div class="logo">
+                            <label for="logo">Include Logo <strong>(RM 25)</strong></label>
+                            <input data-cost="25" type="checkbox" name="logo" id="logo" />
+                            <input type="file" name="logo-file" id="logo-file"/>
+                        </div>
+                        <div class="total">Your Cart: RM 0</div>
+                    </div>
+                    <div class="payment">
+                        <div class="payment-text">Please Pay: <strong>RM 0</strong></div>
+                        <button onclick="totalPayment()">Proceed to Payment</button>
                     </div>
                 </div>
             </section>
+            <section>
+                <div class="container">
+                    <table>
+                    </table>
+                </div>
+            </section>
         </main>
-        <footer>
-            <div class="container">
-                <div class="total">TOTAL: 53.00 RM</div>
-            </div>
-        </footer>
+        <script src="./js/ecommerce.js"></script>
+        <script>
+
+        </script>
     </body>
 </html>
